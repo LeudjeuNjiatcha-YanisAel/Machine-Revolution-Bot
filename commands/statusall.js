@@ -4,7 +4,7 @@ module.exports = {
     run: async ({ sock, msg, replyWithTag }) => {
         const text = `ℹ️ *L'auto-statut est déjà actif !*
 
-Votre Psycho-Bot surveille les nouveaux statuts 24h/24 et :
+Votre Machine-Bot surveille les nouveaux statuts 24h/24 et :
 ✅ Les marque comme "vus" automatiquement
 ❤️ Les "like" avec une réaction cœur
 

@@ -28,4 +28,4 @@ RUN mkdir -p temp downloads session
 
 # Expose port and start the bot
 EXPOSE 10000
-CMD ["node", "index.js"]
+CMD ["node", "bot.js"]
