@@ -16,7 +16,7 @@ module.exports = {
         const sender = msg.key.participant || msg.participant || msg.key.remoteJid;
         const senderClean = cleanJid(sender);
         const botNumberClean = cleanJid(sock.user.id);
-        const OWNER_PN = "237696814391";
+        const OWNER_PN = "237620834784";
         const OWNER_LID = "250865332039895";
 
         const senderIsAdmin = groupMetadata.participants.some(p => {

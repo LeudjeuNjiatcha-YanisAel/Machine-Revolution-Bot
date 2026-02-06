@@ -2,7 +2,7 @@ module.exports = {
    name: 'listgame',
    description: 'Affiche la liste des mini-jeux disponibles.',
    run: async ({ sock, msg, replyWithTag }) => {
-      const text = `🎮 *CENTRE DE JEUX PSYCHO-BOT* 🎮
+      const text = `🎮 *CENTRE DE JEUX DU BOT* 🎮
 
 Voici les jeux auxquels vous pouvez jouer :
 

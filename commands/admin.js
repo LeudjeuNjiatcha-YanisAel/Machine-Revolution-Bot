@@ -8,7 +8,7 @@ module.exports = {
     run: async ({ sock, msg, commands, replyWithTag }) => {
         if (!sock.user) return;
 
-        const BOT_NAME = "PSYCHO BOT";
+        const BOT_NAME = "MACHINE BOT";
         const PREFIX = "!";
         const remoteJid = msg.key.remoteJid;
         const sender = msg.pushName || "Administrateur";
@@ -53,7 +53,7 @@ module.exports = {
             helpText += `│  ⚠️ Aucun outil de gestion configuré.\n`;
         }
 
-        helpText += `╰───≼ 🔥 PSYCHO SETTINGS 🔥 ≽───╯`;
+        helpText += `╰───≼ 🔥 SETTINGS 🔥 ≽───╯`;
 
         try {
             await replyWithTag(sock, remoteJid, msg, helpText);

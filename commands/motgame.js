@@ -5,7 +5,7 @@ module.exports = {
     description: 'Devinez le mot mélangé.',
     run: async ({ sock, msg, replyWithTag }) => {
         const from = msg.key.remoteJid;
-        const words = ["WHATSAPP", "PYTHON", "BOT", "TELEPHONE", "ORDINATEUR", "INTERNET", "PROGRAMMATION", "AFRIQUE", "CAMEROUN", "BASKETBALL", "MUSIQUE"];
+        const words = ["WHATSAPP", "PYTHON", "BOT", "TELEPHONE", "ORDINATEUR", "INTERNET", "PROGRAMMATION", "AFRIQUE", "CAMEROUN", "BASKETBALL", "MUSIQUE","VOYAGE", "CUISINE", "HISTOIRE", "SCIENCE", "ART", "LITTÉRATURE", "CINÉMA", "JEU", "SPORT"];
         const word = words[Math.floor(Math.random() * words.length)];
         const scrambled = word.split('').sort(() => 0.5 - Math.random()).join('');
 

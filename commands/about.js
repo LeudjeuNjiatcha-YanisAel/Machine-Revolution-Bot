@@ -5,16 +5,14 @@ module.exports = {
 
         const text = `
 🤖 *Psycho-Bot*
-Version : 1.1.0
-Auteur : PSYCHO
+Version : 1.1.1
+Auteur : MACHINE REVOLUTION
 Description : Bot WhatsApp multifonctions basé sur Baileys
 ⚡ Fonctions : Audio, Sticker, Mini-jeux, Admin, Utilitaires et plus
 
 📱 Suivez l'auteur :
-- Portfolio : https://psycho.is-a.dev
-- GitHub : https://github.com/psycho237-prog
-- TikTok : https://www.tiktok.com/@gregoire_legrand
-- LinkedIn : https://www.linkedin.com/in/onana-gregoire-legrand-a18529282
+- GitHub : https://github.com/LeudjeuNjiatcha-YanisAel
+- LinkedIn : https://www.linkedin.com/in/leudjeu-njiatcha-yanis-ael-9b1a4b1b7/
         `;
 
         await sock.sendMessage(from, { text });

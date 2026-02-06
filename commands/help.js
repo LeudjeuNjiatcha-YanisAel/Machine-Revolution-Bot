@@ -7,8 +7,8 @@ module.exports = {
     run: async ({ sock, msg, commands, replyWithTag }) => {
         if (!sock.user) return;
 
-        const BOT_NAME = "PSYCHO BOT";
-        const PREFIX = "!";
+        const BOT_NAME = "MACHINE BOT";
+        const PREFIX = "/";
         const remoteJid = msg.key.remoteJid;
         const sender = msg.pushName || "Utilisateur";
 
@@ -41,7 +41,7 @@ module.exports = {
         }
 
         helpText += `│\n│  💡 Tapez *${PREFIX}command* pour l'utiliser.\n`;
-        helpText += `│  🌐 *Portfolio:* https://psycho.is-a.dev\n╰───≼ 🔥 XYBERCLAN 🔥 ≽───╯`;
+        helpText += `│  🌐 ╰───≼ 🔥 FSOCIETY 🔥 ≽───╯`;
 
         try {
             await replyWithTag(sock, remoteJid, msg, helpText);

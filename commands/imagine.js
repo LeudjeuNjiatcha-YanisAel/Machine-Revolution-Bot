@@ -42,7 +42,7 @@ module.exports = {
             // 4. Send
             await sock.sendMessage(from, {
                 image: watermarkedBuffer,
-                caption: `✨ *Prompt:* ${prompt}\n\n_By PSYCHO-BOT_`
+                caption: `✨ *Prompt:* ${prompt}\n\n_By MACHINE-BOT_`
             }, { quoted: msg });
 
         } catch (err) {

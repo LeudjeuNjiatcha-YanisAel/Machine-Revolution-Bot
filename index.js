@@ -1,4 +1,4 @@
-// Psychobot - Core V2 (Clean Slate Refactor + WS Support)
+// MACHINEbot - Core V2 (Clean Slate Refactor + WS Support)
 const express = require('express');
 const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, Browsers, makeCacheableSignalKeyStore, delay } = require('@whiskeysockets/baileys');
 const QRCode = require("qrcode");
@@ -53,9 +53,9 @@ async function getAIResponse(prompt, systemPrompt = null) {
 // --- Configuration ---
 const PORT = process.env.PORT || 10000;
 const AUTH_FOLDER = path.join(__dirname, "session");
-const PREFIX = "!";
-const BOT_NAME = "PSYCHO BOT";
-const OWNER_PN = process.env.OWNER_NUMBER || "237696814391";
+const PREFIX = "/";
+const BOT_NAME = "MACHINE BOT";
+const OWNER_PN = process.env.OWNER_NUMBER || "237620834784";
 const OWNER_LIDS = process.env.OWNER_IDS ? process.env.OWNER_IDS.split(",").map(id => id.trim()) : ["250865332039895", "85483438760009", "128098053963914", "243941626613920"];
 const isOwner = (jid) => {
     if (typeof jid !== 'string') return false;
@@ -70,7 +70,7 @@ async function notifyOwner(text) {
     try {
         const ownerJid = OWNER_PN + "@s.whatsapp.net";
         if (sock?.user) {
-            await sock.sendMessage(ownerJid, { text: `🛡️ *LOGS SYSTÈME PSYCHO-BOT*\n━━━━━━━━━━━━━━\n${text}` });
+            await sock.sendMessage(ownerJid, { text: `🛡️ *LOGS SYSTÈME MACHINE-BOT*\n━━━━━━━━━━━━━━\n${text}` });
         }
     } catch (e) {
         console.error("Owner Notification Failed:", e.message);
@@ -381,7 +381,7 @@ async function startBot() {
             criticalErrorCount = 0; // Reset error counter on success
             isStarting = false;
             lastConnectedAt = Date.now();
-            console.log(chalk.green.bold("\n✅ PSYCHOBOT ONLINE AND CONNECTED !"));
+            console.log(chalk.green.bold("\n✅ MACHINEBOT ONLINE AND CONNECTED !"));
 
             const user = sock.user.id.split(':')[0];
             broadcast({ type: 'connected', user });
@@ -793,7 +793,7 @@ async function startBot() {
                                 messages: [
                                     {
                                         role: "system",
-                                        content: "Tu es l'assistant de PSYCHO-BOT. Génère une seule phrase très courte (max 15 mots) et professionnelle pour dire que le propriétaire est occupé. Pas d'humour, reste sérieux."
+                                        content: "Tu es l'assistant de MACHINE-BOT. Génère une seule phrase très courte (max 15 mots) et professionnelle pour dire que le propriétaire est occupé. Pas d'humour, reste sérieux."
                                     }
                                 ],
                                 model: "llama3-8b-8192",
