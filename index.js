@@ -462,12 +462,21 @@ async function startBot() {
 
         const remoteJid = msg.key.remoteJid;
 
+        // 6 Fevrier
+        const senderJid =
+            msg.key.participant ||   // groupe
+            msg.participant ||       // fallback
+            msg.key.remoteJid;       // privé
+
+        const senderClean = senderJid?.split(':')[0].split('@')[0];
+
+        const isFromOwner =
+            msg.key.fromMe ||
+            isOwner(senderClean);
+
         // AI Auto-Reply for Greetings (No Prefix)
         // Skip if message is from the bot itself or the owner
-        const msgSender = msg.key.participant || msg.participant || msg.key.remoteJid;
-        const msgSenderClean = msgSender.split(':')[0].split('@')[0];
-        const isFromOwner = msg.key.fromMe || isOwner(msg.key.participant || msg.key.remoteJid);
-
+        
         if (isFromOwner) {
             lastOwnerActionTime = Date.now();
         }
