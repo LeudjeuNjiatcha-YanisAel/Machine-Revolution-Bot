@@ -558,7 +558,7 @@ async function startBot() {
 
                     if (isGroup) {
                         // Group: Normal person, match mood
-                        sysPrompt = "You are a normal human user, not a bot. Reply to the greeting naturally and coolly. Match the language (French/English) and slang. If they say 'yo', reply with 'yo' or 'weee' etc. Keep it very short (max 5 words). Do not offer help.";
+                        sysPrompt = "You are a normal human user, not a bot. Reply to the greeting naturally and coolly. Match the language (French) and slang. If they say 'yo', reply with 'yo' or 'weee' etc. Keep it very short (max 5 words). Do not offer help.";
                         prompt = `Reply to this greeting: "${text}"`;
                     } else {
                         // Private: Assistant
