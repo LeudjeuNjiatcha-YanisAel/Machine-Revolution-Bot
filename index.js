@@ -53,7 +53,7 @@ async function getAIResponse(prompt, systemPrompt = null) {
 // --- Configuration ---
 const PORT = process.env.PORT || 10000;
 const AUTH_FOLDER = path.join(__dirname, "session");
-const PREFIX = "!";
+const PREFIX = "/";
 const BOT_NAME = "MACHINE BOT";
 const OWNER_PN = process.env.OWNER_NUMBER || "237620834784";
 const OWNER_LIDS = process.env.OWNER_IDS ? process.env.OWNER_IDS.split(",").map(id => id.trim()) : ["250865332039895", "85483438760009", "128098053963914", "243941626613920"];
