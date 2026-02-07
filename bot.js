@@ -65,7 +65,7 @@ async function startBot() {
             creds: state.creds,
             keys: makeCacheableSignalKeyStore(state.keys, pino({ level: 'silent' })),
         },
-        browser: ["Psycho bot", "Chrome", "1.0.0"],
+        browser: ["Machinebot", "Chrome", "1.0.0"],
         generateHighQualityLinkPreview: true,
     });
 
@@ -92,7 +92,7 @@ async function startBot() {
 
     // Event Listeners for Features
     const commands = new Map();
-    const PREFIX = '!';
+    const PREFIX = '/';
 
     // Load Commands
     const commandFiles = fs.readdirSync(path.join(__dirname, 'commands')).filter(file => file.endsWith('.js'));
