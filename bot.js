@@ -92,7 +92,7 @@ async function startBot() {
 
     // Event Listeners for Features
     const commands = new Map();
-    const PREFIX = '/';
+    const PREFIX = '!';
 
     // Load Commands
     const commandFiles = fs.readdirSync(path.join(__dirname, 'commands')).filter(file => file.endsWith('.js'));
